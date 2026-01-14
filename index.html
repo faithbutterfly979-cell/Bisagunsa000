@@ -1,86 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medic - Healthcare</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- ===== HEADER ===== -->
-<header class="header">
-    <div class="header-container">
-
-        <div class="logo">
-            <img src="logo.png" alt="Medic Logo">
-            <span>Medic.</span>
-        </div>
-
-        <nav class="nav" id="navMenu">
-            <a href="#" class="active">Home</a>
-            <a href="#">Department</a>
-            <a href="#">Doctors</a>
-            <a href="#">Contact Us</a>
-            <a href="#" class="btn-appointment">Appointment</a>
-        </nav>
-
-        <!-- Mobile Menu Icon -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-    </div>
-</header>
-
-<!-- ===== HERO SECTION ===== -->
-<section class="hero">
-    <div class="hero-container">
-
-        <!-- Left Content -->
-        <div class="hero-text">
-            <h1>Bringing Health To Life For The Whole Family</h1>
-            <p>
-                Using all our experience and expertise to give you the best healthcare services.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#" class="btn-primary">Explore our services</a>
-            </div>
-
-            <!-- Stats -->
-            <div class="hero-stats">
-                <div>
-                    <h3>24/7</h3>
-                    <span>Online Support</span>
-                </div>
-                <div>
-                    <h3>80+</h3>
-                    <span>Doctors</span>
-                </div>
-                <div>
-                    <h3>100k+</h3>
-                    <span>Customers</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Image -->
-        <div class="hero-image">
-            <img src="doctor.png" alt="Doctor">
-        </div>
-
-    </div>
-
-    <!-- Background Shapes -->
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-</section>
-
-<!-- ===== SIMPLE SCRIPT FOR MOBILE MENU ===== -->
-<script>
-function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show");
+<html>
+  <head> .topbar {
+  background: linear-gradient(90deg, #2a003a, #4a0066);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-</script>
 
-</body>
-</html>
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #f0e6ff;
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+ ← styles go here
+  <body>
+    <header> ← top bar goes here
+    <main>   ← your content goes here
+  </body>
+
