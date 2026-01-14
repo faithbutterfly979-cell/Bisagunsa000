@@ -1,76 +1,166 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MediTrade — Medical Equipment Marketplace</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,sans-serif}
-    body{background:#f6f7fb;color:#111}
-    header{background:linear-gradient(120deg,#5b3cc4,#7b5cff);color:#fff;padding:80px 8vw;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-    header img{width:100%;max-width:420px;border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
-    h1{font-size:3rem;line-height:1.1;margin-bottom:20px}
-    p.lead{font-size:1.1rem;opacity:.9;margin-bottom:28px}
-    .cta{display:flex;gap:16px;flex-wrap:wrap}
-    .btn{padding:14px 26px;border-radius:999px;border:none;cursor:pointer;font-weight:600}
-    .btn.primary{background:#fff;color:#5b3cc4}
-    .btn.secondary{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)}
-    section{padding:80px 8vw}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-    .card{background:#fff;border-radius:24px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-    .card h3{margin-bottom:10px}
-    footer{background:#111;color:#fff;padding:40px 8vw;text-align:center;font-size:.9rem}
-  </style>
+    <meta charset="UTF-8">
+    <title>MedTrade — Medical Equipment Trading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fb;
+            color: #333;
+        }
+        header {
+            background: #0b5ed7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #084298;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 40px 10%;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            color: #0b5ed7;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        footer {
+            background: #0b5ed7;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .btn {
+            background: #0b5ed7;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #084298;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #0b5ed7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #084298;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div>
-    <h1>Simplify medical equipment trade</h1>
-    <p class="lead">MediTrade connects hospitals, clinics, and suppliers on one trusted digital marketplace.</p>
-    <div class="cta">
-      <button class="btn primary">Get Started</button>
-      <button class="btn secondary">Browse Equipment</button>
-    </div>
-  </div>
-  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=900" alt="Medical professional">
+    <h1>MedTrade</h1>
+    <p>Global Medical Equipment Trading & Supply</p>
 </header>
 
-<section>
-  <h2 style="font-size:2.2rem;margin-bottom:32px">Why use MediTrade?</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Verified suppliers</h3>
-      <p>All vendors are vetted for compliance and quality standards.</p>
-    </div>
-    <div class="card">
-      <h3>Fast procurement</h3>
-      <p>Search, compare, and order equipment in minutes.</p>
-    </div>
-    <div class="card">
-      <h3>Secure payments</h3>
-      <p>Escrow‑based payments protect both buyers and sellers.</p>
-    </div>
-    <div class="card">
-      <h3>Global logistics</h3>
-      <p>Integrated shipping and customs support worldwide.</p>
-    </div>
-  </div>
-</section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<section style="background:#eef0ff">
-  <h2 style="font-size:2.2rem;margin-bottom:32px">Who is it for?</h2>
-  <div class="grid">
-    <div class="card"><h3>Hospitals</h3><p>Centralize procurement and reduce purchasing costs.</p></div>
-    <div class="card"><h3>Clinics</h3><p>Access certified equipment without long contracts.</p></div>
-    <div class="card"><h3>Manufacturers</h3><p>Reach new buyers and manage orders in one dashboard.</p></div>
-  </div>
-</section>
+<div class="container">
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+            MedTrade is a trusted supplier and exporter of high-quality medical equipment to hospitals,
+            clinics, and distributors worldwide. We ensure certified products, fast logistics, and competitive pricing.
+        </p>
+    </section>
+
+    <section id="products" class="section">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="card">
+                <h3>Diagnostic Equipment</h3>
+                <p>X-ray, Ultrasound, ECG, MRI accessories</p>
+            </div>
+            <div class="card">
+                <h3>Surgical Instruments</h3>
+                <p>Scalpels, forceps, surgical kits, sterilization tools</p>
+            </div>
+            <div class="card">
+                <h3>Hospital Furniture</h3>
+                <p>Hospital beds, trolleys, examination tables</p>
+            </div>
+            <div class="card">
+                <h3>Consumables</h3>
+                <p>Gloves, masks, syringes, PPE kits</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <ul>
+            <li>International sourcing and procurement</li>
+            <li>Bulk supply and distribution</li>
+            <li>Regulatory and documentation support</li>
+            <li>After-sales support</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Request a quote or get in touch with our team.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</div>
 
 <footer>
-  © 2026 MediTrade. All rights reserved.
+    <p>© 2026 MedTrade. All rights reserved.</p>
 </footer>
 
 </body>
