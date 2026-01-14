@@ -1,15 +1,14 @@
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Medic Website</title>
-
-    <!-- Attach CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic - Healthcare</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header class="header">
     <div class="header-container">
 
@@ -18,7 +17,7 @@
             <span>Medic.</span>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" id="navMenu">
             <a href="#" class="active">Home</a>
             <a href="#">Department</a>
             <a href="#">Doctors</a>
@@ -26,8 +25,62 @@
             <a href="#" class="btn-appointment">Appointment</a>
         </nav>
 
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
     </div>
 </header>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-container">
+
+        <!-- Left Content -->
+        <div class="hero-text">
+            <h1>Bringing Health To Life For The Whole Family</h1>
+            <p>
+                Using all our experience and expertise to give you the best healthcare services.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Explore our services</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div>
+                    <h3>24/7</h3>
+                    <span>Online Support</span>
+                </div>
+                <div>
+                    <h3>80+</h3>
+                    <span>Doctors</span>
+                </div>
+                <div>
+                    <h3>100k+</h3>
+                    <span>Customers</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="hero-image">
+            <img src="doctor.png" alt="Doctor">
+        </div>
+
+    </div>
+
+    <!-- Background Shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+</section>
+
+<!-- ===== SIMPLE SCRIPT FOR MOBILE MENU ===== -->
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
