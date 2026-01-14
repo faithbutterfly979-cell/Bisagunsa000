@@ -1,137 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Personal Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <title>MediTrade — Medical Equipment Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      background: #fafafa;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 100px 20px 60px;
-      text-align: center;
-      background: #ffffff;
-    }
-
-    header h1 {
-      font-size: 48px;
-      font-weight: 300;
-      margin: 0;
-    }
-
-    header p {
-      margin-top: 12px;
-      font-size: 18px;
-      color: #666;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-
-    h2 {
-      font-size: 28px;
-      font-weight: 400;
-      border-bottom: 1px solid #e0e0e0;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #888;
-      font-size: 14px;
-    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,sans-serif}
+    body{background:#f6f7fb;color:#111}
+    header{background:linear-gradient(120deg,#5b3cc4,#7b5cff);color:#fff;padding:80px 8vw;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    header img{width:100%;max-width:420px;border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+    h1{font-size:3rem;line-height:1.1;margin-bottom:20px}
+    p.lead{font-size:1.1rem;opacity:.9;margin-bottom:28px}
+    .cta{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{padding:14px 26px;border-radius:999px;border:none;cursor:pointer;font-weight:600}
+    .btn.primary{background:#fff;color:#5b3cc4}
+    .btn.secondary{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4)}
+    section{padding:80px 8vw}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .card{background:#fff;border-radius:24px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .card h3{margin-bottom:10px}
+    footer{background:#111;color:#fff;padding:40px 8vw;text-align:center;font-size:.9rem}
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Your Name</h1>
-    <p>Professional Title · Location</p>
-  </header>
-
-  <section>
-    <h2>About</h2>
-    <p>
-      Write a short introduction about yourself here. Who you are, what you do, and what makes you unique.
-    </p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Company Name</h3>
-        <p>Role · Year – Year</p>
-        <p>Description of your responsibilities and achievements.</p>
-      </div>
-      <div class="card">
-        <h3>Company Name</h3>
-        <p>Role · Year – Year</p>
-        <p>Description of your responsibilities and achievements.</p>
-      </div>
+<header>
+  <div>
+    <h1>Simplify medical equipment trade</h1>
+    <p class="lead">MediTrade connects hospitals, clinics, and suppliers on one trusted digital marketplace.</p>
+    <div class="cta">
+      <button class="btn primary">Get Started</button>
+      <button class="btn secondary">Browse Equipment</button>
     </div>
-  </section>
+  </div>
+  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=900" alt="Medical professional">
+</header>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">Strategy</div>
-      <div class="card">Leadership</div>
-      <div class="card">Finance</div>
-      <div class="card">Marketing</div>
-      <div class="card">Operations</div>
+<section>
+  <h2 style="font-size:2.2rem;margin-bottom:32px">Why use MediTrade?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Verified suppliers</h3>
+      <p>All vendors are vetted for compliance and quality standards.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Project Name</h3>
-        <p>Short description of the project.</p>
-      </div>
-      <div class="card">
-        <h3>Project Name</h3>
-        <p>Short description of the project.</p>
-      </div>
+    <div class="card">
+      <h3>Fast procurement</h3>
+      <p>Search, compare, and order equipment in minutes.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Secure payments</h3>
+      <p>Escrow-based payments protect both buyers and sellers.</p>
+    </div>
+    <div class="card">
+      <h3>Global logistics</h3>
+      <p>Integrated shipping and customs support worldwide.</p>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: youremail@example.com</p>
-    <p>LinkedIn / GitHub / Website</p>
-  </section>
+<section style="background:#eef0ff">
+  <h2 style="font-size:2.2rem;margin-bottom:32px">Who is it for?</h2>
+  <div class="grid">
+    <div class="card"><h3>Hospitals</h3><p>Centralize procurement and reduce purchasing costs.</p></div>
+    <div class="card"><h3>Clinics</h3><p>Access certified equipment without long contracts.</p></div>
+    <div class="card"><h3>Manufacturers</h3><p>Reach new buyers and manage orders in one dashboard.</p></div>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Your Name
-  </footer>
+<footer>
+  © 2026 MediTrade. All rights reserved.
+</footer>
 
 </body>
 </html>
