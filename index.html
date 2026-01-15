@@ -1,9 +1,93 @@
-<link rel="stylesheet" href="style.css">
-<img src="images/doctor.png">
-<head>
-  <meta charset="UTF-8">
-  <title>Medic</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header class="top-header">
+  <div class="header-inner">
+    <div class="logo">
+      <img src="img.png" alt="Logo">
+    </div>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <nav class="top-nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Healthcare Providers</a>
+      <a href="#">Patients + Caregivers</a>
+      <a href="#">Company Information</a>
+      <a href="#">Support + Resources</a>
+    </nav>
+  </div>
+</header>
+
+<body>
+
+<header class="top-header">
+  ...
+</header>
+
+<main>
+  <!-- rest of your page -->
+</main>
+
+</body>
+
+/* HEADER BAR */
+.top-header {
+  width: 100%;
+  background: linear-gradient(90deg, #2c0a4a, #4b1570);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 36px;
+}
+
+.top-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.top-nav a:hover {
+  color: #ffd84d;
+}
+
+.top-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ffd84d;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .top-nav {
+    gap: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
