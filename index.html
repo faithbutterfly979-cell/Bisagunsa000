@@ -1,21 +1,14 @@
-Bisagunsa000/
-├── index.html 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Bisagunsa</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+/your-project
+│
+├── index.html
+└── styles.css
 <header class="top-header">
   <div class="header-inner">
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+      <img src="logo.png" alt="Company Logo">
     </div>
 
-    <nav class="top-nav">
+    <nav class="main-nav">
       <a href="#" class="active">Home</a>
       <a href="#">Healthcare Providers</a>
       <a href="#">Patients + Caregivers</a>
@@ -24,32 +17,20 @@ Bisagunsa000/
     </nav>
   </div>
 </header>
-
-<main>
-  <h1>Welcome</h1>
-  <p>Your page content goes here.</p>
-</main>
-
-</body>
-</html>
-
-├── style.css
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* --- Top Header Bar --- */
 .top-header {
-  width: 100%;
-  background: linear-gradient(90deg, #2c0a4a, #4b1570);
-  padding: 16px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  height: 72px;
+  background: linear-gradient(90deg, #2b0040, #4b0070);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   z-index: 1000;
 }
 
 .header-inner {
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
@@ -61,46 +42,51 @@ body {
   height: 36px;
 }
 
-.top-nav {
+/* --- Navigation --- */
+.main-nav {
   display: flex;
-  gap: 32px;
+  gap: 28px;
 }
 
-.top-nav a {
-  color: white;
+.main-nav a {
   text-decoration: none;
-  font-weight: 500;
+  color: #ffffffcc;
   font-size: 15px;
-  position: relative;
+  font-weight: 500;
   padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
-.top-nav a:hover {
-  color: #ffd84d;
+.main-nav a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffcc33;
 }
 
-.top-nav a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #ffd84d;
-  border-radius: 2px;
+.main-nav a.active {
+  color: #ffcc33;
+  border-bottom-color: #ffcc33;
 }
 
-@media (max-width: 900px) {
-  .top-nav {
+/* Push page content below fixed header */
+body {
+  padding-top: 72px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#2b0040  /* darker purple */
+#4b0070  /* lighter purple */
+#ffcc33  /* gold highlight */
+@media (max-width: 768px) {
+  .main-nav {
     gap: 16px;
+    font-size: 14px;
+  }
+
+  .logo img {
+    height: 30px;
   }
 }
 
-@media (max-width: 600px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
 
-└── logo.png
