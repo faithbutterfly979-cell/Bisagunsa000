@@ -1,41 +1,108 @@
-<h1 style="color:blue;">A Blue Heading</h1>
-
-<p style="color:red;">A red paragraph.</p>
-<html>
-<head>
-<style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
-</style>
-</head>
-<body>
-
-<h1> color: blue;
-  font-family: verdana;
-  font-size: 300%;
-  
-<p>color: red;
-  font-family: courier;
-  font-size: 160%;
-
-  border: 2px solid powderblue;
-  padding: 30px;
-
-   border: 2px solid powderblue;
-  margin: 50px;
-  
-</body>
-</html>
+Bisagunsa000/logo.png
+├── index.html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<header class="top-header">
+  <div class="header-inner">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+
+    <nav class="top-nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Healthcare Providers</a>
+      <a href="#">Patients + Caregivers</a>
+      <a href="#">Company Information</a>
+      <a href="#">Support + Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Welcome</h1>
+  <p>Your page content goes here.</p>
+</main>
 
 </body>
 </html>
+
+├── style.css
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER BAR */
+.top-header {
+  width: 100%;
+  background: linear-gradient(90deg, #2c0a4a, #4b1570);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 36px;
+}
+
+.top-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.top-nav a:hover {
+  color: #ffd84d;
+}
+
+.top-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ffd84d;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .top-nav {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+└── logo.png
