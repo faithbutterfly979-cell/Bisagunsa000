@@ -1,156 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Inari Medical Trade Page</title>
-<style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #14001f;
-  color: white;
+  background: radial-gradient(circle at top, #2a003f, #14001f);
+  perspective: 1200px;
+  overflow-x: hidden;
 }
 
-section {
-  padding: 80px 40px;
+/* 3D floating background container */
+.bg-3d {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  transform-style: preserve-3d;
 }
 
-h1,h2,h3 {
-  color: #ffd36a;
+/* Floating shapes */
+.bg-3d span {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #ffd36a55, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: float 20s infinite linear;
+  transform: translateZ(-200px);
 }
 
-.header {
-  background: linear-gradient(90deg, #2a003f, #4b0073);
-  padding: 20px 40px;
+/* Different positions */
+.bg-3d span:nth-child(1) { top: 10%; left: 10%; animation-duration: 30s; }
+.bg-3d span:nth-child(2) { top: 60%; left: 20%; animation-duration: 25s; }
+.bg-3d span:nth-child(3) { top: 30%; left: 70%; animation-duration: 35s; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateZ(-200px); }
+  50% { transform: translateY(-80px) translateZ(-100px); }
+  100% { transform: translateY(0) translateZ(-200px); }
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo { font-weight: bold; font-size: 22px; color: #ffd36a; }
-
-.menu {
-  display: flex;
-  gap: 30px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.trust, .features, .usecases {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #220033;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.cta {
-  text-align: center;
-  background: #2a003f;
-}
-
-button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 20px;
-  background: #ffd36a;
-  font-weight: bold;
-  cursor: pointer;
-}
-</style>
-</head>
-<body>
-
-<header class="header">
-  <div class="navbar">
-    <div class="logo">INARI</div>
-    <nav class="menu">
-      <a href="#hero">Home</a>
-      <a href="#solution">Products</a>
-      <a href="#evidence">Clinical</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero" id="hero">
-  <div class="hero-text">
-    <h1>InThrill™ Thrombectomy System</h1>
-    <p>Purpose-built devices for safe and effective AV thrombosis treatment.</p>
-    <button>Request a Demo</button>
-  </div>
-  <img src="https://via.placeholder.com/400x250">
-</section>
-
-<section class="trust">
-  <div class="card">FDA Cleared</div>
-  <div class="card">CE Certified</div>
-  <div class="card">Used in 500+ Hospitals</div>
-  <div class="card">ISO 13485 Certified</div>
-</section>
-
-<section>
-  <h2>The Clinical Challenge</h2>
-  <p>AV access thrombosis presents serious risks including loss of access, repeated interventions, and increased patient morbidity.</p>
-</section>
-
-<section id="solution">
-  <h2>Our Solution</h2>
-  <p>The InThrill™ system is designed specifically for AV anatomy, enabling controlled, efficient clot removal with reduced procedural risk.</p>
-</section>
-
-<section class="features">
-  <div class="card">Optimized catheter design</div>
-  <div class="card">Controlled aspiration</div>
-  <div class="card">Reduced blood loss</div>
-  <div class="card">Faster procedure time</div>
-</section>
-
-<section id="evidence">
-  <h2>Clinical Evidence</h2>
-  <p>95% technical success rate. 35% reduction in procedure time compared to standard methods.</p>
-</section>
-
-<section class="usecases">
-  <div class="card">Interventional Radiologists</div>
-  <div class="card">Vascular Surgeons</div>
-  <div class="card">Dialysis Centers</div>
-  <div class="card">Hospital Procurement Teams</div>
-</section>
-
-<section>
-  <h2>What Physicians Say</h2>
-  <p>“This system significantly improved our procedural efficiency and patient outcomes.”</p>
-</section>
-
-<section class="cta" id="contact">
-  <h2>Ready to Learn More?</h2>
-  <button>Contact Sales</button>
-</section>
-
-<footer style="padding:40px; text-align:center;">
-  © 2026 Inari Medical · Privacy · Legal · Careers
-</footer>
-
-</body>
-</html>
